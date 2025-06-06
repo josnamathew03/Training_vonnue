@@ -1,0 +1,201 @@
+PART 1
+
+
+Git: A Version Control Tool
+Git helps you track changes in your project over time, like creating checkpoints or backups so you can go back if something breaks.
+
+🔹 1. git init – Start Tracking a Project
+It initializes Git in your project folder.
+Creates a hidden .git folder where Git saves all versions (commits) and settings.
+Think of it like turning on the time machine for your code.
+
+🔹 2. .gitignore – Tell Git What to Skip
+You can list files or folders that you don’t want Git to track, like:
+Temporary files
+IDE configs (e.g., .vscode/)
+Large files like videos or builds
+These go into a special file called .gitignore.
+
+🔹 3. git commit – Save a Version (Backup)
+Every time you want to save your work, you create a commit.
+Each commit is a snapshot of the current project.
+Example: "Added login page" or "Fixed signup bug"
+
+🔹 4. git checkout – Switch Between Versions
+Use this to go back in time to any commit.
+You can also use it to switch between branches (different versions of your project).
+Great for testing old versions or undoing mistakes.
+git checkout <id>
+to go back to current snapshot : git checkout <branchname>
+
+🔹 5. HEAD – Your Current Position
+HEAD points to your current commit (like a bookmark).
+The latest commit is usually HEAD.
+
+🔸 Detached HEAD: Happens when you go to an old commit without being on a branch. You're no longer in a safe place to make changes, unless you create a new branch from there.
+
+🔹 6. git reset – Undo a Commit
+Think of it as going back in time and erasing one or more commits.
+Useful when you made a mistake and want to undo recent changes.Destructive cannot change back
+hard reset:
+git reset <id1> <id2> --hard
+git reset head head~1 -- hard
+soft reset:
+change the commit not the files
+git reset <id1>
+
+🔹 7. git branch – Create Different Paths of Work
+A branch is like a copy of your project where you can try new things without affecting the original.
+main is usually the default branch.
+
+You can make a new branch like feature/login-page.
+
+📌 Lightweight branching:
+
+Git makes switching between branches very fast and uses little memory, unlike other tools.
+
+🔹 8. git merge – Bring Changes Together
+Use this to combine work from one branch into another.
+
+Example: Merge your feature/login-page into main once it’s working.
+
+🔹 9. Conflicts – When Git Doesn’t Know What to Keep
+Happens during a merge when two people edited the same line in different branches.
+
+Git stops and asks you to decide which version to keep.
+
+🔹 10. git cherry-pick – Pick Specific Commits
+Instead of merging a whole branch, you can pick one specific commit and apply it to another branch.
+
+Example: “I only want that bug fix commit, not the rest.”
+
+🔹 11. git diff – See the Difference
+Shows the changes between two versions of your code.
+
+
+Can compare:
+
+Two commits
+git diff <commitid1> <commitid2>
+git diff <head> <head~1>
+git diff <head> <head~1> --name-only
+
+Two branches
+
+Your changes vs. last commit
+
+🔹 12. Collaboration – Work as a Team
+Git lets multiple people work on the same project.
+
+Everyone works on branches, and then merges their changes.
+
+Git helps manage and combine all contributions safely.
+
+🔹 13. git clone – Copy a Remote Project
+Use this to download a Git project (e.g., from GitHub) to your computer.
+
+You now have your own local version of the project.
+
+🔹 14. git push – Send Your Changes Online
+After committing locally, use push to upload your commits to GitHub (or another remote repo).
+
+Think of it as saving your changes to the team version.
+
+🔹 15. git pull – Get Latest Updates from Others
+Use this to download new changes made by others from the remote repo.
+
+Think of it as syncing your local project with the team's version.
+
+🔹 16. Pull Request (PR) – Ask to Merge Your Work
+On platforms like GitHub:
+
+You create a pull request to ask team members to review and merge your branch.
+
+They can see what you changed, comment, and approve it.
+
+Great for collaboration and review.
+
+
+
+PART 2
+
+
+🔹 1. git status
+Shows the current status of your project:
+
+Files that are changed
+
+Files staged for commit
+
+Untracked files
+
+🔹 2. Open VS Code in the Current Folder
+bash
+Copy code
+code .
+This opens the current folder in Visual Studio Code (works if you have VS Code CLI installed).
+
+🔹 3. Add Files to Staging Area
+Add a single file:
+bash
+Copy code
+git add filename
+Add all changes (new + modified files):
+git add .
+🔸 After adding, files are in the "staged" state, ready to be committed.
+
+🔹 4. Make a Commit
+Correct syntax:
+bash
+Copy code
+git commit -m "Your message here"
+If you want to add + commit in one step (for tracked files only):
+git commit -a -m "Your message here"
+
+
+🔹 5. esc + :wq
+This is for saving and exiting the commit message editor if you didn’t provide -m.
+
+Press Esc, then type:
+:wq
+Press Enter
+It writes (saves) and quits the editor (works in Vim inside terminal).
+
+🔹 6. git log
+Shows the history of commits:
+To view it compactly:
+git log --oneline
+
+🔹 7. .gitignore
+Correct method:
+
+At the root of your Git repo, create a file (not folder) named:
+.gitignore
+Add file/folder names you want to ignore. Example:
+node_modules/
+.env
+*.log
+Stage and commit .gitignore
+git add .gitignore
+git commit -m "Add .gitignore"
+
+8.git restore 
+to remove all the achnages we have done after last commit
+git restore --hard : from head remove all the changes 
+git restore filename : give the name of t he file that we wanted to restore
+
+gti checkout head -f :git checkout can also be used. checkout to head by forcing it remove  modified files 
+git checkout filename : give the name of t he file that we wanted to restore
+
+
+Branching 
+
+
+
+
+
+
+
+
+
+
