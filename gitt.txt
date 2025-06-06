@@ -115,6 +115,7 @@ They can see what you changed, comment, and approve it.
 
 Great for collaboration and review.
 
+----------------------------------------------------------------------------------------
 
 
 PART 2
@@ -137,8 +138,6 @@ This opens the current folder in Visual Studio Code (works if you have VS Code C
 
 🔹 3. Add Files to Staging Area
 Add a single file:
-bash
-Copy code
 git add filename
 Add all changes (new + modified files):
 git add .
@@ -146,8 +145,6 @@ git add .
 
 🔹 4. Make a Commit
 Correct syntax:
-bash
-Copy code
 git commit -m "Your message here"
 If you want to add + commit in one step (for tracked files only):
 git commit -a -m "Your message here"
@@ -165,6 +162,7 @@ It writes (saves) and quits the editor (works in Vim inside terminal).
 Shows the history of commits:
 To view it compactly:
 git log --oneline
+git  loog branchname
 
 🔹 7. .gitignore
 Correct method:
@@ -187,8 +185,88 @@ git restore filename : give the name of t he file that we wanted to restore
 gti checkout head -f :git checkout can also be used. checkout to head by forcing it remove  modified files 
 git checkout filename : give the name of t he file that we wanted to restore
 
+----------------------------------------------------------------------------------------
+
 
 Branching 
+
+
+We are commmiting to the de fault branch while using git.
+git branch -a : to view all the branches available 
+git status : to view the current branch
+we can do a sequence of commit inn another branch
+after completing a work wen can merge it t the main branch
+git branch branchname : to create new branch
+git checkout branchname : to switch branch
+
+git cherrypick <commitid> :if we wanetd to merge only one commimt in to t he  ain branch instead of all the changes we can use cherrypick
+
+first go to branch where we wanted add our changes then : git merge branchname
+
+when two branches made same change then conflicts will come. then we have to manually change a codethen add the reosved file : git add  rresolved file ame
+
+git branch -d branchnamme : to delete a branch
+git branch -D branchnamme : force delete
+
+---------------------------------------------------------------------------------------
+
+Git collaboratin
+
+
+git repository is actually local, so we wont be able to work with others for that we use GitHub. using that we can give the repositaey to othes and the can work on it.
+
+cloning without using GitHub :
+we have to be server for giving to code to evry computer. for that wee ccan use ssh. then clone : git clone root@ipaddr:/path
+git remote -v : give the rermote origin we can use origin in evry where
+in remote we have several branch to acess that wee can make a test branch with simillR NAame. if we do some commits in remote branch and we wanted to see it wee can use fetch : git fetch . to view it in test beanch : git merge
+
+git fetch+ git merge = git pull
+
+
+
+git push : to push it to server . ALL the commits inn the branch to be pushed must be pulled first then we can push it.
+ 
+
+git pull request : to sen a request to merge it to  the main 
+
+review :
+
+-------------------------------------------------------------------------------------------
+
+GitHub and git
+
+cloning using GitHub:
+create a repo 
+git remote add origin url
+git branch -M main : to set master branch ti main
+git push -u origin main : Push local code to GitHub (main branch), to set a teacking branch for main
+
+git clone repoppath : you ca ad an exitng repostirtory
+
+lock GitHub so   that all users can mrge and submit for review
+
+In locked branch we have to crea te a new branch and do code in there and push theer.
+
+then too push we have to give a pull request
+
+-------------------------------------------------------------------------------------------
+
+Hosting website using GitHub
+
+
+https://www.youtube.com/watch?v=EGMZ-L0yVhc&list=PLQzJEzrRmXOW7pKbwpicijzUdxZmDgqNL&index=7
+
+-----------------------------------------------------------------------------------------
+
+git rebase
+
+instead of merging main branch to my current working branh for making it UpToDate it eill create a complicated history of commits to removr that we can use rebase
+
+ git pull --rebase is a powerful way to combine fetching and rebasing, and it helps keep your Git history clean and linear.  
+
+
+git push -f (or git push --force) is used to forcefully push your local branch to the remote repository, even if it overwrites changes that are already there.
+
 
 
 
