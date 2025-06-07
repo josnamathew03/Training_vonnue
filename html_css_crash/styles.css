@@ -32,6 +32,8 @@ hexcode = #r+g+b*/
 
 } */
 
+/* -------------------------------------------------------------------- */
+
 
 /* inline elemnents - Dont take up any  more room than their contet needs eg:span anchor strong dont nest bloch=k elemnets in inline
 block elements- take whole width regardless o fthe content eg:p,div,h1
@@ -40,16 +42,16 @@ block elements- take whole width regardless o fthe content eg:p,div,h1
 /* in inspect console we can seee the styles as block oor l=inline elements we can actually forcw+efully change this in our screen
 span tag is actually inline element we can make it block elemr=etn
 div is block elment we can make it inline element*/
-span {
+/* span { */
     /* display: block; */
-     margin: 20px;
+     /* margin: 20px;
     padding: 20px;
-}
-div {
+} */
+/* div { */
     /* display: inline; */
-    margin: 20px;
+    /* margin: 20px;
     padding: 20px;
-}
+} */
 
 /* margin alows to give  a margin outside the border all the way aroung the border for block elemnets
 for inline elements margin will be given only for the top and botton
@@ -57,3 +59,120 @@ padding given an internal space for an element, giievs padidng all the way aroun
 padding when comes to inline elements can overlap and collapse whenn it came horizontally
 in case of block elments margin can get collapsed
 We can overwrite user agent style sheet which is given by default by the browseer*/
+
+/* ------------------------------------------------------------------- */
+
+/*Class Selectors
+ class selctor starts with a . followed by a class name. Give class name wher e wee specify the paragraph
+we can give same class name to diffferrt tags which we ewanted to style the same
+for tags with samme name we can use p.tagmname to select specific selectors*/
+
+p.para1 {
+    color: cadetblue;
+}
+p.sucess {
+    color: green;
+}
+/* we can give two class name for the same tagg  */
+p.sucess.feedback {
+    border: 2px solid brown;
+}
+
+/* Id selectors
+#folloewd b y id name 
+we ca also give tag name at the front
+all id must be unique*/
+
+div#content {
+    background-color: #ebebeb;
+    padding: 20px;
+}
+
+/* descentant selctors 
+   inside div there is an anchor we can style it using this
+   inside div tah-g there is an class selector par1 we stylet this
+   space after tag name indicate descentant slector
+   other wise it check kfor a div tag with class name given
+*/
+div a {
+    color: rgb(130, 23, 69);
+}
+div .para1{
+    background-color: rgb(233, 230, 231);
+}
+
+/*  Attribute selector
+ anchor tags with attribute href- a[href]
+ anchor tag with attribute href and value of href specified
+ '*' indicate the given sentance specified anywhere in the href
+ $ means any href which eends with the given href */
+
+ a[href$="com"] {
+    background-color: #6d2424;
+    color: aliceblue;
+    text-decoration: double;
+    font-weight: bold;
+    text-transform: uppercase;
+
+ }
+ a[href*="youtube"] {
+    /* background-color: #6d2424; */
+    /* color: aliceblue; */
+    text-decoration: double;
+    font-weight: bold;
+    text-transform: uppercase;
+
+ }
+ /*Universal selectors
+ * {} this selcts all the elements
+  */
+
+
+
+ /* Css cacade
+ html elements caninherit css properties that are applies to their parents
+ <div>
+    <p> hii
+        <span> ninjja </span>
+    </p>
+</div>
+
+div{
+ color; red ;
+ border : 20px solid red;
+ margon: 40px;
+}
+ red color is applied to all paragraph which is a child of div and span which is a child of paragrsph
+ not all properrties are inherited if we gave border then it is only applied to div as awhole 
+ if wanted to nherrit the margin property then
+ if we dont want the color properrty to be same as div jjust give the color in the p property
+
+ if we specify color again then the onne givenn the  last is considereed becausse it is taken from bottom to top
+ But if we give a more speciifc selector like ddescentant then the one that is speccific is taken
+ div p{
+    margin:inherit;
+    border : inherit;
+    color : blue;
+}
+
+p{
+ color : black;
+}
+
+ */
+
+ div{
+ color: red ;
+ border : 20px solid rgb(221, 186, 186);
+ margin: 40px;
+}
+
+div p{
+    margin:inherit;
+    border : inherit;
+    color : blue;
+}
+
+p{
+ color : yellowgreen;
+}
