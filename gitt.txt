@@ -183,7 +183,7 @@ git restore --hard : from head remove all the changes
 git restore filename : give the name of t he file that we wanted to restore
 
 gti checkout head -f :git checkout can also be used. checkout to head by forcing it remove  modified files 
-git checkout filename : give the name of t he file that we wanted to restore
+git checkout filename : give the name of t he file that we want to restore
 
 ----------------------------------------------------------------------------------------
 
