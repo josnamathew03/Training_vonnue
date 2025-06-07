@@ -1,0 +1,131 @@
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: ariel;
+}
+/* removws all default styles */
+
+header {
+   position: fixed;
+   width: 100%;  
+   /* width is set otherwise we wont be able to see.Make the width of this element 100% of its parent container's width */
+   /* The z-index property in CSS controls the stacking order of elements along the Z-axis (think: front-to-back, like layers in Photoshop or PowerPoint). */
+   top: 0;
+   left: 0;
+   z-index: 1;
+   background-color: #F63232;
+   padding: 20px;
+   text-align: center;
+}
+
+header h1{
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    /* in padding if i wriite like above then it means that 6px to the top and botton and 12px to the left and right */
+    display: inline-block;
+    border-radius: 36px;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    max-width: 100%;
+}
+.banner .welcome{
+    background-color: #FEB614;
+    color: white;
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    top: 30%;
+}
+.banner h2{
+    font-size: 74px;
+}
+.banner h2 span{
+    font-size: 1.3em; 
+    /* take the normal size and multiply it with the value given */
+}
+
+nav{
+    background-color: #F4F4F4;
+    padding: 20px;
+    position: sticky;
+    top: 106px;
+}
+
+nav ul{
+    white-space: nowrap;
+    /* It prevents text (or inline content) from wrapping to the next line, even if it overflows the container. */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* 0 = top and bottom margins
+    auto = left and right margins automatically adjust to center the element horizontally in its container.
+ */
+}
+nav li{
+    width:25%;
+    display: inline-block;
+    font-size: 24px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #4B4B4B;
+
+}
+nav li a.join{
+    color: #F63232;
+}
+main{
+    max-width: 100%;
+    width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+article h2{
+ color: #F63232;   
+ font-size: 48px;
+}
+article p{
+    line-height: 2em;
+    color: #4b4b4b;
+}
+.images{
+    text-align: center;
+    margin: 80px 0px ;
+    white-space: nowrap;
+}
+.images li{
+    display: inline-block;
+    /* to make the images sit next to each other */
+    width: 40%;
+    margin: 20px 5%;
+}
+.images li img{
+    width: 100%;
+}
+section.join{
+    background: #F4F4F4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4b4b4b;
+}
+.join h2{
+    font-size: 36px;
+}
+form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 28px;
+    font-size: 24px;
+    border: 4px solid white;
+}
+footer{
+    background-color: #F63232;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
