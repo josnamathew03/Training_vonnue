@@ -112,3 +112,67 @@ Forms
 
 CSS BASICS
 
+h1 {
+    color: orange;
+    font-size: 20PX;
+    background-color: slategray;
+    font-family:Arial ;
+    text-align: center;
+}
+p {
+    color: slategray;
+    text-align: right;
+    line-height: 30px ;
+    letter-spacing: 0.2px;
+    column-count: 2;
+    
+}
+ul {
+    /* 
+    border-width: 20p;
+    border-style: dashed;
+    border-color: rebeccapurple; */
+    /* border : 4px solid crimson;   three in one*/
+    border-left : 2px dashed purple;
+    border-right :2px dotted darkblue;
+}
+/* for specifying colors very specifically we can also use hex codes or give color names directly.
+hexcode = #r+g+b*/
+
+li {
+    list-style-type: square;
+    /* text-shadow: 3px 3px lightgrey; */
+    text-shadow: 3px 3px #1c4242;
+
+}
+/* inline elemnents - Dont take up any  more room than their contet needs eg:span anchor strong dont nest block elemnets in inline elemenets
+block elements- take whole width regardless o fthe content eg:p,div,h1
+ */
+
+ /* in inspect console we can seee the styles as block oor l=inline elements we can actually forcw+efully change this in our screen
+span tag is actually inline element we can make it block elemr=etn
+div is block elment we can make it inline element*/
+span {
+    /* display: block; */
+     margin: 20px;
+    padding: 20px;
+}
+div {
+    /* display: inline; */
+    margin: 20px;
+    padding: 20px;
+}
+
+/* margin alows to give  a margin outside the border all the way aroung the border for block elemnets
+for inline elements margin will be given only for the top and botton
+padding given an internal space for an element, giievs padidng all the way around both inline and block elemnets
+padding when comes to inline elements can overlap and collapse whenn it came horizontally
+in case of block elments margin can get collapsed
+We can overwrite user agent style sheet which is given by default by the browseer*/
+
+---------------------------------------------------------------------------------
+
+CLASS AND SELECTORS
+
+
+

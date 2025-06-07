@@ -218,7 +218,7 @@ git repository is actually local, so we wont be able to work with others for tha
 cloning without using GitHub :
 we have to be server for giving to code to evry computer. for that wee ccan use ssh. then clone : git clone root@ipaddr:/path
 git remote -v : give the rermote origin we can use origin in evry where
-in remote we have several branch to acess that wee can make a test branch with simillR NAame. if we do some commits in remote branch and we wanted to see it wee can use fetch : git fetch . to view it in test beanch : git merge
+in remote we have several branch to acess that wee can make a test branch with simillR NAame. if we do some commits in remote origin branch and we wanted to see it wee can use fetch : git fetch . to view it in test beanch : git merge
 
 git fetch+ git merge = git pull
 
