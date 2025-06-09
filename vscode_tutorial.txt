@@ -16,8 +16,8 @@ ctrl+tab- shift between opened files in a current project
 ctrl+R- shift between projects
 click and hold alt andd then click whatever we want
 Ctrl + D (select next matching code, "Add Selection to Next Find Match")
-ALT + CMD + Up Arrow Key (adds the cursor at the same position in the prior line, "Add Cursor Above")
-ALT + CMD + Down Arrow Key (adds the cursor at the same position in the next line, "Add Cursor Below")
+ALT + Ctrl + Up Arrow Key (adds the cursor at the same position in the prior line, "Add Cursor Above")
+ALT + Ctrl + Down Arrow Key (adds the cursor at the same position in the next line, "Add Cursor Below")
 
 
 there is user settings and also worksapce settings

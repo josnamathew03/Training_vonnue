@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------
 Basics
-
+                                                                                                          
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +55,6 @@ Forms
     <h1>forms</h1>
 
     <form>
-
         <label for="username">Enter username:</label>
         <input type="text" id="usename" name="username" > 
         <br><br>
@@ -145,7 +144,7 @@ li {
     text-shadow: 3px 3px #1c4242;
 
 }
-/* inline elemnents - Dont take up any  more room than their contet needs eg:span anchor strong dont nest block elemnets in inline elemenets
+/* inline elemnents - Dont take up any  more room than their contet needs eg:span anchor strong. dont nest block elemnets in inline elemenets
 block elements- take whole width regardless o fthe content eg:p,div,h1
  */
 
@@ -343,9 +342,27 @@ sticky: combination of static and fixed
 
 --------------------------------------------------------------------------------------
 
-Pseudo class
+PSEUDO CLASSES
 
 style elemenets when they aree in a p  a rticular state-hover, focus, firs child of a parent
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INTRO TO MEDIA QUERIES
+
+Media queries: Tell the browser how to style an element at particu lar viewport dimensions
+
+Viewport meta tag: tell the browser what width the viewport should be
+
+Responsive iamges: only  load smaller images for mobile devices
+
+we can to have mobile first approach. first design for  mobille and then gradually go for desktop view.
+
+viwport meta tag is used to set the width aas device width                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+
+
+
 
 
 

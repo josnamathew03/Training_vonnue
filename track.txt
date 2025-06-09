@@ -16,7 +16,7 @@ Monday 9/6/25-
     pseudo class
     vscode study
     css revision
+    media query
+    css positioning started
     linux commands revision
 
-
-    l
