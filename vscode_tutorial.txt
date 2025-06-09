@@ -1,0 +1,25 @@
+! + enter will create the basic skeleton for our html 
+
+we can select two editors by clicking view+edit layout or by just darg and drop
+
+command pallete = ctrl+shift+p
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+in javascript and typescript if we hover over anything we can see the details related to that
+
+if ctrl+enter or we right click and seelect go to definition thrn we go to the corresponding specified place 
+
+right click + peek definition then it shows the page we are curreently in and the fi=unction definition and also we can edit it
+
+ctr+k+s - list of keyboard shortcuts
+shift+alt+f- format the entire code page 
+ctrl+tab- shift between opened files in a current project
+ctrl+R- shift between projects
+click and hold alt andd then click whatever we want
+Ctrl + D (select next matching code, "Add Selection to Next Find Match")
+ALT + CMD + Up Arrow Key (adds the cursor at the same position in the prior line, "Add Cursor Above")
+ALT + CMD + Down Arrow Key (adds the cursor at the same position in the next line, "Add Cursor Below")
+
+
+there is user settings and also worksapce settings
+
+make worksapce by adding multiple projects folder
