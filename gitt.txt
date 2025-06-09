@@ -131,8 +131,6 @@ Files staged for commit
 Untracked files
 
 🔹 2. Open VS Code in the Current Folder
-bash
-Copy code
 code .
 This opens the current folder in Visual Studio Code (works if you have VS Code CLI installed).
 
@@ -266,6 +264,35 @@ instead of merging main branch to my current working branh for making it UpToDat
 
 
 git push -f (or git push --force) is used to forcefully push your local branch to the remote repository, even if it overwrites changes that are already there.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+✅ 2. Connect Your Local Git Project to the GitHub Repository
+Make sure your local project is already initialized with Git:
+
+
+git init
+Now, link it to your GitHub repo:
+
+
+git remote add origin https://github.com/your-username/your-repo.git
+Or if you're using SSH:
+
+git remote add origin git@github.com:your-username/your-repo.git
+You can verify the remote:
+
+
+git remote -v
+✅ 3. Set the Branch and Push to GitHub
+Set the branch to main (or whichever you're using):
+
+
+git branch -M main
+Now push your code to GitHub:
+
+git push -u origin main
+This pushes your local main branch to GitHub and sets it as the tracking branch for future pushes and pulls.
 
 
 

@@ -129,3 +129,56 @@ footer{
     padding: 10px;
     text-align: center;
 }
+/* ---------------------- */
+/* pseudo class */
+/* https://www.w3schools.com/css/css_pseudo_elements.asp */
+
+nav li a:hover {
+    text-decoration: underline;
+    /* background-color: blue; */
+    /* padding: 20px; */
+}
+
+/* shifting position using positopn relative*/
+.images li:hover {
+    position: relative;
+    top: -4px;
+    left: 6px;
+    /* move  -4 to the top */
+}
+
+form input:focus{
+    border:4px dashed #4b4b4b;
+    outline: none;
+}
+/* if wee type a valid email we willget to know that for that we are using valid pswudo class */
+form input:valid{
+    border: 4px solid #71d300;
+}
+/* stle the first child of a parent class here first li of the parent ul */
+/* nav li:first-child{
+    border:3px solid #F63232;
+} */
+
+article p::first-line{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section.join p::first-letter{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+p::selection{
+    background-color: rgb(47, 38, 38);
+    color: white;
+}
+P::after{
+    content:  '...' ;
+}
+
+
+
+
+
