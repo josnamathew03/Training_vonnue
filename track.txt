@@ -12,11 +12,21 @@ Friday 6/6/25-
 Saturday 7/7/25-
     css basics
     github revision
+    
 Monday 9/6/25-
     pseudo class
     vscode study
     css revision
     media query
-    css positioning started
-    linux commands revision
+    css positioning started(10videos)
+Code Time : 9h 16m
+Active Code Time : 8h 39m
+
+
+Tuesday 10/6/25-
+    css positioning rest(2 videos)
+    Responsive Web design(12 videos)
+    revision
+    css flexbox
+
 
