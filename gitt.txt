@@ -16,6 +16,7 @@ IDE configs (e.g., .vscode/)
 Large files like videos or builds
 These go into a special file called .gitignore.
 
+
 🔹 3. git commit – Save a Version (Backup)
 Every time you want to save your work, you create a commit.
 Each commit is a snapshot of the current project.

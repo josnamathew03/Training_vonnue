@@ -29,12 +29,17 @@ we can align things in a row by adjusing width and using float.
 
 CLEARING FLOATS
 
+When you float elements using float: left; or float: right;, those elements are removed from the normal document flow — which means:
+Their parent container no longer "sees" them.
+The height of the parent becomes 0 (unless it has other non-floated content).
+As a result, content after the floated items may overlap or collapse into the floated area.
 clear : both - will clear both left and right FLOATS
 OR we can specify left or right as we wwant
 clear will partiLLY GIVE THE NORMAL document flow. but wee wont be able to give the top margin
 one way:
 <div style="clear: both;"></div> : to remove floats completely we can use an empty tag placed between the float ellemnt and others.
 another way:
+take the element or class which causes float
 .serviceM:after{
     content: "";
     display: block;
@@ -62,7 +67,7 @@ section, aside{
 CREATING TEXT COLUMNS (WITHOUT FLOATS)
 
 creating columns:
--wekit-column-count :3;
+-webkit-column-count :3;
 column-count: 3;
 
 making gap:
@@ -89,6 +94,8 @@ reposition its absolutely anywhere in realtive to the parents whose position is 
 ---------------------------------------------------------------------------------------
 
 FIXED POSITIONING
+
+making a position fixed for something
 
 ---------------------------------------------------------------------------
 

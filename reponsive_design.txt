@@ -1,0 +1,136 @@
+We use breakpi nts to control how the device looks at different width
+At the breakpoint we use media query toa dd specific details.
+html stays exactly the same  
+
+---------------------------------------------------------------------------------
+
+INTO TO VIEWPORT
+
+viewport is the size of the your viewing the website
+
+-----------------------------------------------------------------------------------------------
+
+THE VIEWPORT META TAG
+
+using meta viewport tag give the name as viewport and give some values inn content. at first width is specified give width as device width so that it can take the width of the device thst is vieweed on. add anothe value that is initial scale scale as 1 ie the zoom level.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MEDIA QUERIES
+
+allow us to create css rules basedd onn various parameters(vieport size, device type).
+we can arrange our layout to suit a wide variety of different device or screen size
+@media <media-type> and (expressions){}
+:@media screen
+Targets all screen devices like phones, tablets, and desktops.
+
+@media print
+Targets styles when printing a page.
+
+@media (max-width: 600px)
+Applies styles to small screens (mobile devices).
+
+@media (min-width: 768px)
+Targets medium to large screens (tablets and up).
+
+@media (min-width: 768px) and (max-width: 1024px)
+Specifically targets tablet-sized screens.
+
+@media (orientation: portrait)
+Applies styles when the device is in vertical (portrait) mode.
+
+@media (orientation: landscape)
+Applies styles when the device is in horizontal (landscape) mode.
+
+@media (min-resolution: 2dppx)
+Targets high-resolution or retina screens.
+
+@media (prefers-color-scheme: dark)
+Applies styles when the user prefers dark mode.
+
+@media all
+Applies to all devices and media types.
+
+css casscading rules that written in the bottoom overlaps ri=ulws that are written at the top.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FLUID LAYOUTS
+
+fluiid layout usee relative measurements and reponds to the width of the viewport
+Fixed layouts use ststic measurements and do nto respond to the width of the viewport
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DROP DOWN MENU BUTTON **
+
+    .burger-nav{
+        display: block;
+        height: 40px;
+        width: 100%;
+        background: url(images/star.png) no-repeat 98% center;
+        background-color: #404040;
+        cursor: pointer;
+    }
+    header .wrapper{
+        width:100%;
+        padding: 0;
+    }
+    .navi ul{
+        height: 0;
+        overflow: hidden;
+        background: #505050;
+    }
+     header .navi ul.open{
+        height: auto;
+    } 
+    .navi ul li{
+        float: none;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+    .navi ul li a{
+        margin: 0;
+        display: block;
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid #404040;
+    }
+  
+  ------------------------------------------------------------------------------------------------------------------------
+
+ THE PICTURE TAG
+ https://www.youtube.com/watch?v=LlSH8u0o1-A&list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw&index=10
+
+While doing reponsive websites we may cayse the image to loose many informations to avi=oid that. we can use use different images for different sccreens using picture tag.
+but many browssers doesnt supportt the picture tag so wed use polyfill to allow every browseer to use it
+polyfill: add this in header
+ <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="picturefill.js" async></script>
+
+picture tag:
+ <picture>
+        <source src="images/banner-small.jpeg" media="(max-width: 480px)">
+        <source src="images/banner-medium.jpeg" media="(max-width: 768px)">
+        <img src="images/banner.jpg" alt="">
+       </picture>
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+RESPONSIVE FRAMEWORKS
+
+A set of code practises bundled together in apacka ge which can hwlp to solve a problem
+reponsive framework is made to make creating reponsivve website easier
+eg: skleton, foundation, bootstrap
+
+bootstrap:
+comes bundled with fluiid grrid system based on css classess
+also comes baked with otherr features such as sliders dropdown menus popups etc
+
+fluid grids : splits web page in to colums, which we can slot our content on to. It autimatically reaarange the content to repond to smalelr screens
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------

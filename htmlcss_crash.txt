@@ -238,7 +238,8 @@ div .para1{
  * {} this selcts all the elements
   */
 
-
+service:nth-child(1) targets an element with the class .service only if it is the first child of its parent.
+ It selects the first .service element — but only if it's actually the first child overall, not just the first .service.
 
  /* Css cacade
  html elements caninherit css properties that are applies to their parents
