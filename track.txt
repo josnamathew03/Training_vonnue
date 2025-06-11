@@ -26,8 +26,14 @@ Active Code Time : 8h 39m
 Tuesday 10/6/25-
     css positioning rest(2 videos)
     revision
-    made website responsive by referring to another website
+    made a website responsive by referring to another website
     Responsive Web design(12 videos)
-    css flexbox
+    css flexbox(2 videos)
+CT - 9h 12m
+ACT - 8h
+typing- 15 wpm
 
+Wednessday 11/6/25-
+    css flexbox rest(10 videos)
+    revision
 

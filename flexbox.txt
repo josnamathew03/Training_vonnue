@@ -1,0 +1,75 @@
+flexbox is used to make css layouts more easier
+control position, size, spacing of elements relative to their parent elements and each other
+work reponsively
+apply display type as flex and all the children before flexible
+    display: flex;
+by defaukt flex items stack from left to right
+
+-----------------------------------------------------------------------
+
+FLEX GROW PROPERTY
+
+allow to grow elemnts in to the available space but the rate at which it grow is governed by flex groe property
+If all children have flex-grow: 0, they won't grow at all — they'll just take up their natural space.
+If you set flex-grow: 1 for each child, they will share the remaining space equally.
+If one child has flex-grow: 2 and another has flex-grow: 1, the first one will get twice as much of the leftover space as the second.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+FLEX SHRINK
+
+rate at which elemnts shrink
+Imagine you and your friends are sitting on a bench (the flex container). But the bench is not big enough for everyone to sit comfortably. So, you all scoot closer (shrink) to make space.
+flex-shrink decides who scoots how much.
+Higher flex-shrink value = shrinks more.
+Lower value = shrinks less.
+flex-shrink: 0 = ❌ don't shrink at all (even if there’s not enough space).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FLEX WRAP
+
+if we use flex grow and we specified some min width it wipp go beyond the page at some point some element may get vanish , using flex wrrap wwe canwrap it to next line inse=tead of vanishing
+apply felx wrap to the containerr of the elemment.
+when an element wrapt o the next line it take up all the available spaces
+wrap-reeverse make the elemrnt go abovvve instaed of going below
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FLEX BASIS
+
+flex-basis	Sets the starting size of the flex item
+Default	auto (takes content size or width)
+Works with	flex-grow, flex-shrink
+
+--------------------------------------------------
+
+flex: apply all three in  one property
+ you want elements to start at a certain size, but also be flexible when screen size changes.
+
+flex : grow shrink basis
+
+-------------------------------------------------------------------
+
+FLOW AND AXIS
+
+flex-flow is a shorthand property that combines:
+flex-direction → Direction of the items (row or column)
+flex-wrap → Whether items should wrap to the next line
+So instead of writing both separately, you can write them together in one line.
+flex-flow: <flex-direction> <flex-wrap>;
+
+------------------------------------------------------------------------
+
+ALIGN ITEMS
+
+align-items is a Flexbox property that controls how flex items are aligned vertically (cross-axis) inside the container.
+justify content is sapplied in main axix ad align items is applied to the croess axix
+
+------------------------------------------------------
+border-sizing: Depending on the box-sizing value, the total size of the box may change when you add padding or border.
+✅ Two Common Values:
+Value	What it means
+content-box (default)	📦 width = only content size. Padding and border are added outside.
+border-box	📦 width = content + padding + border (all included in total size).
+
