@@ -5,6 +5,11 @@ apply display type as flex and all the children before flexible
     display: flex;
 by defaukt flex items stack from left to right
 
+You use it when you want:
+A navigation bar
+A card layout
+Buttons or boxes to resize and align nicely across screen sizes
+
 -----------------------------------------------------------------------
 
 FLEX GROW PROPERTY
@@ -73,3 +78,11 @@ Value	What it means
 content-box (default)	📦 width = only content size. Padding and border are added outside.
 border-box	📦 width = content + padding + border (all included in total size).
 
+/* The order property lets you change the position of flex items without changing the HTML structure. */
+.onee{order: 2;}
+.twoo{order: -1;}
+.three{order: 4;}
+.fourr{order: 3;}
+
+
+they say i am sic

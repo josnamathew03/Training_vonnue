@@ -1,4 +1,4 @@
-We use breakpi nts to control how the device looks at different width
+We use breakpints to control how the device looks at different width
 At the breakpoint we use media query toa dd specific details.
 html stays exactly the same  
 

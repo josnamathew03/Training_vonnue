@@ -94,6 +94,8 @@ Git helps manage and combine all contributions safely.
 
 🔹 13. git clone – Copy a Remote Project
 Use this to download a Git project (e.g., from GitHub) to your computer.
+git clone <repository-url>
+
 
 You now have your own local version of the project.
 
@@ -180,6 +182,9 @@ git commit -m "Add .gitignore"
 to remove all the achnages we have done after last commit
 git restore --hard : from head remove all the changes 
 git restore filename : give the name of t he file that we wanted to restore
+git restore <file>	Discards changes in a file (unstaged changes only)
+git restore --staged <file>	Unstages a file (moves from staged to unstaged)
+git restore --source <commit> <file>
 
 gti checkout head -f :git checkout can also be used. checkout to head by forcing it remove  modified files 
 git checkout filename : give the name of t he file that we wantedd to restore
@@ -282,20 +287,29 @@ Or if you're using SSH:
 
 git remote add origin git@github.com:your-username/your-repo.git
 You can verify the remote:
-
-
 git remote -v
+
 ✅ 3. Set the Branch and Push to GitHub
 Set the branch to main (or whichever you're using):
-
-
 git branch -M main
-Now push your code to GitHub:
 
+Now push your code to GitHub:
 git push -u origin main
 This pushes your local main branch to GitHub and sets it as the tracking branch for future pushes and pulls.
 
+------------------------------------------------------
+git rebase main
+This moves all your commits in htmlcss to the latest tip of main.
 
+Then:
+# Step 3: Switch to main
+git checkout main
+
+# Step 4: Merge htmlcss (now fast-forwarded)
+git merge htmlcss
+
+# Step 5: Push to GitHub
+git push origin main
 
 
 
