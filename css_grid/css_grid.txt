@@ -3,7 +3,7 @@ Grid allows layout in both directions — rows and columns — at the same time.
 
 -------------------------------------------------------------------------------------
 
-COLUMS
+COLUMNS
 
 give diplsy as grid
 

@@ -1,0 +1,23 @@
+css variables are also called custom property
+--my-property:value
+like everything else we need to specify variables in selectors too
+  :root{
+    --theme-color:hwb(167 8% 59%);
+    --link-color:  #e15e62;
+    --layout: 1fr 1fr 1fr;
+}
+nav{
+    --link-color: black;
+}
+
+@media screen and (man-width:760px) {
+    :root{
+    --layout: 1fr;
+
+    }
+}
+
+
+    .banner{
+    background: var(--theme-color);
+    }
