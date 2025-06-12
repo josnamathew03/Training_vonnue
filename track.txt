@@ -36,4 +36,11 @@ typing- 15 wpm
 Wednessday 11/6/25-
     css flexbox rest(10 videos)
     revision
+    css animation (11 videos)
+    
+Thursday 12/6/25-
+    css animation rest(2 videos)
+    revision
+    css grid
+    css variables
 

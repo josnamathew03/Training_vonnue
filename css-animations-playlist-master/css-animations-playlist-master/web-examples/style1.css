@@ -1,0 +1,128 @@
+.pop-up{
+    background: rgb(40, 39, 39);
+}
+*{
+  font-family: Calibri, sans-serif; 
+  font-weight: normal;
+  color: #333;
+}
+h1{
+  font-size: 48px;
+  margin: 10px 0;
+}
+p{
+  margin-bottom: 40px;
+}
+#pop-up{
+    position: relative;
+    top: 200px;
+    width: 500px;
+    text-align: center ;
+    margin: 20px auto;
+}
+#pop-up .container{
+  background: #f0e4d4; 
+  padding: 30px; 
+  position: absolute; 
+  top: 50px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+#pop-up input{
+    border: 1px solid #333;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+}
+button{
+    border-radius:0 10px 10px 0;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    background: #333;
+    margin-left: -5px;
+    margin-right: -5px;
+    border: 1px solid #333;
+    font-size: 14px;
+
+}
+.cross{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: #333;
+    color: white;
+    border-radius: 50px;
+    height: 22px;
+    width: 22px;
+  font-weight: bold;
+
+}
+
+/* pop up animation */
+
+#pop-up{
+top: -400px;
+transform-origin: 10px 10px;
+animation: drop 1s ease forwards,
+            swing 2s 3s;
+}
+
+@keyframes drop {
+  0%{opacity: 0;}
+  70%{transform: translateY(700px);}
+  100%{transform: translateY(650px); opacity: 1;}
+}
+
+@keyframes swing {
+  0%   { transform: translateY(650px) rotate(0deg); }
+  40%  { transform: translateY(650px) rotate(90deg); }
+  70%  { transform: translateY(650px) rotate(70deg); }
+  100% { transform: translateY(650px) rotate(75deg); }
+}
+
+/* Basket */
+
+header{
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+display: flex;
+justify-content: space-between;  
+}
+.basket ul{
+  padding: 0;
+  margin-top: 40px;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    padding: 0 20px;
+  gap: 20px;
+}
+.products li{
+  width: 30%;
+  list-style-type: none;
+  width: 30%;
+  text-align: center;
+}
+.basket button{
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.zoom{
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  animation: zoom 1s ease forwards;
+  /* opacity: 0; */
+}
+
+@keyframes zoom {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0; right: 40px;}
+}
+
