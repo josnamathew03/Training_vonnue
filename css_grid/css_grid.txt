@@ -1,0 +1,144 @@
+Flexbox works in one direction at a time — row or column.
+Grid allows layout in both directions — rows and columns — at the same time.
+
+-------------------------------------------------------------------------------------
+
+COLUMS
+
+give diplsy as grid
+
+using %:
+  /* grid-template-columns: 33.3% 33.3% 33.3%; */
+
+using fracrion:
+			grid-template-columns: 1fr 2fr 1fr;
+
+using repeat:
+			grid-template-columns: repeat(3, 1fr);
+
+------------------------------------------------------------------------------------
+
+rows
+
+rows have default height based on the content in any of that row
+
+it gives a height of 100 px irrespective of the content
+            grid-auto-rows: 100px;
+
+set min  200px and auto
+            grid-auto-rows: minmax(200px, auto);
+
+grid-template-rows sets the height of each row in the grid in the order you specify.
+This example creates 3 rows with the following heights:
+Row 1: 300px
+Row 2: 200px
+Row 3: 400px
+            grid-template-rows: 300px 200px 400px;
+
+using repeat:
+            grid-template-rows: repeat(3,minmax(200px,auto));
+
+Defaultlynthe row will appear so no need to use it in certain occations
+
+instead of mamrgin which will be allaround we are using grid gap
+            grid-gap: 10px;
+            grid-row-gapg
+            grid-column-gap
+
+---------------------------------------------------------------------------------------
+
+COLUMN AND ROW LINES
+
+defines positon of agrid and allow us to arrange position
+if x colums or rows then ;there is x+1 amount of lines
+
+  .one{
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1/3;
+        }
+
+-------------------------------------------------------------------------------------------------
+
+NESTING GRIDS
+
+
+
+            grid-column: span 3;
+
+---------------------------------------------------------------------------------------------------------
+
+JUSTIFYING AND ALIGNMENT
+
+align: up and down
+            align-items: start;
+by default it is strech
+stretch (default)	Stretches items to fill the container vertically (if no fixed height)
+flex-start	Aligns items to the top of the container
+flex-end	Aligns items to the bottom of the container
+center	Vertically centers items
+baseline	Aligns items based on their text baseline (good for mixed text sizes)
+
+justify: left and right
+            justify-items: end;
+
+------------------------------------------------------------------------------------------------------
+
+ input:checked + #content #grid{
+            display: grid;
+        }
+        /* "When an input element is checked, select the #grid element that is inside #content, but only if #content is the next sibling of the input." */
+
+        /* #content > *	All direct children of #content	Applies styles to all immediate child elements inside #content */
+        
+--------------------------------------------------------------------------------------------------------------
+
+GRID AREAS
+
+Give grid area names and position it accordingly
+
+#content{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-auto-rows: minmax(100px, auto);
+			grid-gap: 10px;
+			max-width: 960px;
+			margin: 0 auto;
+            grid-template-areas:
+                "header header header header"
+                "aside . main main"
+                "nav . main main"
+                "section section section section"
+                "section section section section"
+                "footer footer footer footer";
+		}
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        aside{
+            grid-area: aside;
+        }
+        nav{
+            grid-area: nav;
+        }
+        section{
+            grid-area: section;
+        }
+        footer{
+            grid-area: footer;
+        }
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+RESPONSIVE LAYOUTS
+
+
+
+
+
+
+
+
