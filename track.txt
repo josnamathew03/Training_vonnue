@@ -43,4 +43,5 @@ Thursday 12/6/25-
     revision
     css grid
     css variables
+    css mobile first approach
 
