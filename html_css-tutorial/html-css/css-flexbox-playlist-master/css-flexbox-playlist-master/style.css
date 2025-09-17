@@ -1,0 +1,166 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.flex-container{
+    display: flex;
+   background: #e6dddd;
+   flex-wrap: wrap;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+   height: 1000px;
+}
+/* if we make float the background wont be seen because it get floateed too. to remove that we can use after pseudo class  after*/
+.box{
+    height: 100px;
+    min-width: 200px;
+    flex: 0 0 200px;
+    /* float: left; */
+}
+/* .flex-container::after{
+    content: "";
+    clear: both;
+    display: block;
+} */
+.one{
+    background: red;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */
+    /* flex-basis: 100px; */
+}
+.two{
+    background:blue ;
+    /* flex-grow: 1; */
+    /* flex-shrink: 2;
+    flex-basis: 200px; */
+}
+.three{
+    background: green;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */
+    /* flex-basis: 300px; */
+}
+
+/* ----------------------------------------------- */
+nav{
+    background: #333;
+    margin-top: 10px;
+}
+nav li{
+    list-style-type: none;
+
+}
+nav li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+nav a:hover{
+    background: #555;
+}
+a.tw{
+        background: url(img/tw.png) no-repeat;
+        background-size: 100%;
+    }
+    a.fb{
+        background: url(img/fb.png) no-repeat;
+        background-size: 100%;
+
+    }
+    .social a{
+        text-indent: -10000px;
+    }
+
+nav ul.social{
+        flex: 1 1 0;
+        display: flex;
+    }
+    .social{
+        max-width: 80px;
+        margin: 0 auto;
+
+    }
+    nav ul.social li{
+        flex:1 1 0;
+    }
+@media screen and (min-width : 768px){
+    
+    nav ul{
+        display: flex;
+        justify-content: start;
+        /* for justify content we can have values like center flex start fles end 
+        space sround spaces thwm eually 
+        space between give equal spaces between them*/
+    }
+    nav  li{
+        flex: 1 1 0;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .social{
+        margin: 0 0;
+    }
+    #blocks{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    article{
+        flex : 0 1 32%;
+        transition: flex-basis 0.5s linear;
+    }
+    article.stack{
+        flex: 0 1 100%;
+    }
+    
+}
+/* grid vs static layout */
+#blocks{
+    margin: 20px;
+}
+article{
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+article h2{
+    margin-bottom: 5px auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#new{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+#new div{
+    background: #c9c2c2;
+    flex: 0 0 100px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* The order property lets you change the position of flex items without changing the HTML structure. */
+.onee{order: 2;}
+.twoo{order: -1;}
+.three{order: 4;}
+.fourr{order: 3;}

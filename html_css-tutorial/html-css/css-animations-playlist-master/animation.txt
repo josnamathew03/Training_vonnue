@@ -1,0 +1,139 @@
+TRANSFORMS
+
+using transform property we can give values
+translate:
+ x axis or y axis
+    transform: translateX(300px);
+    transform: translate(200px, 200px);
+scale:
+    transform: scale(.5,2);
+rotate:
+    transform: rotateX(100deg);
+    transform: rotateY(100deg);
+since it is 3d we cannot see the rotation, but the size gets small.
+value below 90 we wot be able to see the image
+    transform: rotateZ(100deg);
+along z axixs it will either rotate clockwise and anti clockwise
+    transform: rotateZ(45deg) translate(200px) scale(2);
+---------------------------------------------------------------------------------------------
+
+TRANSITION
+
+selector {
+  transition: property, duration, delay, timing-function ;
+}
+
+ .circle{
+    transition: 1s;
+ }
+ .circle:hover{
+    background-color: salmon;
+    transform: scale(2);
+
+ }
+ transitin is appleid to the circle now whatever changes we maake it is applied like transform
+
+    transition:background 1s;
+    apply transition to background only instead appplying it to everythinf
+
+transition: background 1s, transform 0.9s ;
+we can specify the transition of each elements we wanted like this
+
+transition: background 1s, transform 0.9s 1s(delay) ease-in(timing function) ;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KEYFRAMES
+
+@keyframes defines the stages of an animation, like a storyboard:
+"At the start, do this..."
+"Halfway through, look like this..."
+"At the end, finish like that..."
+You use it with the animation property to control what changes over time.
+
+.pic{
+  animation-name: drive;
+  animation-duration: 3s;
+}
+@keyframes drive{
+  from{ transform : translateX(0)}
+  to{ transform: translateX(500px);}
+}
+inside where we wanna animate give animation name duration etc
+
+-------------------------------------------------------------------
+
+ANIMATION FILL MODE
+
+tell what to do outside animation window
+
+  animation-fill-mode: forwards;
+keep  it in forward position.
+
+forwards → Keep the final style after animation ends
+backwards → Apply the starting style before animation starts
+both → The element immediately shows the start style of the animation (before it starts running)
+And retains the end style after the animation finishe
+
+animation-delay : 2s; delay animation to 2s
+
+-------------------------------------------------------------------------
+
+ANIMATION REPEAT
+
+animation-iteration-count: 3;
+
+animation-iteration-count: infinite;
+
+--------------------------------------------------------------------------
+
+ANIMATION DIRECTION
+
+  animation-direction: alternate;
+go forward and backward simultaneously
+
+  animation-direction: reverse;
+go reverse
+
+----------------------------------------------------------------------------------
+
+ANIMATION TIMING FUNCTIONS
+
+  animation-timing-function: linear;
+default: starts a bit slower then have speed then end slowly 
+ linear; constant speed frrom start to end
+ ease / ease-in-out: starts slow then speeds up then slows down
+ ease-in : starts slow then speed up
+ ease out: starts fast then slows down
+ steps(n)	Jumps in n steps — like a digital counter or sprite animation
+cubic-bezier: refer google if you wanna learn
+
+--------------------------------------------------------------------------------
+
+ANIMATION SHORT HANDS
+
+animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode, play-state;
+
+------------------------------------------------------------------------------------
+
+CHAINING ANIMATION
+
+just put , and the detaj, k
+------------------------------------------------------------
+TRANSFORM ORIGIN
+
+transform-origin defines the point around which a transformation happens, like rotation, scaling, or skewing.
+By default, transformations happen from the center of the element — but transform-origin lets you change that point.
+transform-origin: x y;
+transform-origin: 10px 10px;
+
+
+
+
+
+
+
+
+
+
+

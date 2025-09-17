@@ -1,0 +1,321 @@
+PART 1
+
+
+Git: A Version Control Tool
+Git helps you track changes in your project over time, like creating checkpoints or backups so you can go back if something breaks.
+
+🔹 1. git init – Start Tracking a Project
+It initializes Git in your project folder.
+Creates a hidden .git folder where Git saves all versions (commits) and settings.
+Think of it like turning on the time machine for your code.
+
+🔹 2. .gitignore – Tell Git What to Skip
+You can list files or folders that you don’t want Git to track, like:
+Temporary files
+IDE configs (e.g., .vscode/)
+Large files like videos or builds
+These go into a special file called .gitignore.
+
+
+🔹 3. git commit – Save a Version (Backup)
+Every time you want to save your work, you create a commit.
+Each commit is a snapshot of the current project.
+Example: "Added login page" or "Fixed signup bug"
+
+🔹 4. git checkout – Switch Between Versions
+Use this to go back in time to any commit.
+You can also use it to switch between branches (different versions of your project).
+Great for testing old versions or undoing mistakes.
+git checkout <id>
+to go back to current snapshot : git checkout <branchname>
+
+🔹 5. HEAD – Your Current Position
+HEAD points to your current commit (like a bookmark).
+The latest commit is usually HEAD.
+
+🔸 Detached HEAD: Happens when you go to an old commit without being on a branch. You're no longer in a safe place to make changes, unless you create a new branch from there.
+
+🔹 6. git reset – Undo a Commit
+Think of it as going back in time and erasing one or more commits.
+Useful when you made a mistake and want to undo recent changes.Destructive cannot change back
+hard reset:
+git reset <id1> <id2> --hard
+git reset head head~1 -- hard
+soft reset:
+change the commit not the files
+git reset <id1>
+
+🔹 7. git branch – Create Different Paths of Work
+A branch is like a copy of your project where you can try new things without affecting the original.
+main is usually the default branch.
+
+You can make a new branch like feature/login-page.
+
+📌 Lightweight branching:
+
+Git makes switching between branches very fast and uses little memory, unlike other tools.
+
+🔹 8. git merge – Bring Changes Together
+Use this to combine work from one branch into another.
+
+Example: Merge your feature/login-page into main once it’s working.
+
+🔹 9. Conflicts – When Git Doesn’t Know What to Keep
+Happens during a merge when two people edited the same line in different branches.
+
+Git stops and asks you to decide which version to keep.
+
+🔹 10. git cherry-pick – Pick Specific Commits
+Instead of merging a whole branch, you can pick one specific commit and apply it to another branch.
+
+Example: “I only want that bug fix commit, not the rest.”
+
+🔹 11. git diff – See the Difference
+Shows the changes between two versions of your code.
+
+
+Can compare:
+
+Two commits
+git diff <commitid1> <commitid2>
+git diff <head> <head~1>
+git diff <head> <head~1> --name-only
+
+Two branches
+
+Your changes vs. last commit
+
+🔹 12. Collaboration – Work as a Team
+Git lets multiple people work on the same project.
+
+Everyone works on branches, and then merges their changes.
+
+Git helps manage and combine all contributions safely.
+
+🔹 13. git clone – Copy a Remote Project
+Use this to download a Git project (e.g., from GitHub) to your computer.
+git clone <repository-url>
+
+
+You now have your own local version of the project.
+
+🔹 14. git push – Send Your Changes Online
+After committing locally, use push to upload your commits to GitHub (or another remote repo).
+
+Think of it as saving your changes to the team version.
+
+🔹 15. git pull – Get Latest Updates from Others
+Use this to download new changes made by others from the remote repo.
+
+Think of it as syncing your local project with the team's version.
+
+🔹 16. Pull Request (PR) – Ask to Merge Your Work
+On platforms like GitHub:
+
+You create a pull request to ask team members to review and merge your branch.
+
+They can see what you changed, comment, and approve it.
+
+Great for collaboration and review.
+
+----------------------------------------------------------------------------------------
+
+
+PART 2
+
+
+🔹 1. git status
+Shows the current status of your project:
+
+Files that are changed
+
+Files staged for commit
+
+Untracked files
+
+🔹 2. Open VS Code in the Current Folder
+code .
+This opens the current folder in Visual Studio Code (works if you have VS Code CLI installed).
+
+🔹 3. Add Files to Staging Area
+Add a single file:
+git add filename
+Add all changes (new + modified files):
+git add .
+🔸 After adding, files are in the "staged" state, ready to be committed.
+
+🔹 4. Make a Commit
+Correct syntax:
+git commit -m "Your message here"
+If you want to add + commit in one step (for tracked files only):
+git commit -a -m "Your message here"
+
+
+🔹 5. esc + :wq
+This is for saving and exiting the commit message editor if you didn’t provide -m.
+
+Press Esc, then type:
+:wq
+Press Enter
+It writes (saves) and quits the editor (works in Vim inside terminal).
+
+🔹 6. git log
+Shows the history of commits:
+To view it compactly:
+git log --oneline
+git  loog branchname
+
+🔹 7. .gitignore
+Correct method:
+
+At the root of your Git repo, create a file (not folder) named:
+.gitignore
+Add file/folder names you want to ignore. Example:
+node_modules/
+.env
+*.log
+Stage and commit .gitignore
+git add .gitignore
+git commit -m "Add .gitignore"
+
+8.git restore 
+to remove all the achnages we have done after last commit
+git restore --hard : from head remove all the changes 
+git restore filename : give the name of t he file that we wanted to restore
+git restore <file>	Discards changes in a file (unstaged changes only)
+git restore --staged <file>	Unstages a file (moves from staged to unstaged)
+git restore --source <commit> <file>
+
+gti checkout head -f :git checkout can also be used. checkout to head by forcing it remove  modified files 
+git checkout filename : give the name of t he file that we wantedd to restore
+
+----------------------------------------------------------------------------------------
+
+
+Branching 
+
+
+We are commmiting to the de fault branch while using git.
+git branch -a : to view all the branches available 
+git status : to view the current branch
+we can do a sequence of commit inn another branch
+after completing a work wen can merge it t the main branch
+git branch branchname : to create new branch
+git checkout branchname : to switch branch
+
+git cherrypick <commitid> :if we wanetd to merge only one commimt in to t he  ain branch instead of all the changes we can use cherrypick
+
+first go to branch where we wanted add our changes then : git merge branchname
+
+when two branches made same change then conflicts will come. then we have to manually change a codethen add the reosved file : git add  rresolved file ame
+
+git branch -d branchnamme : to delete a branch
+git branch -D branchnamme : force delete
+
+---------------------------------------------------------------------------------------
+
+Git collaboratin
+
+
+git repository is actually local, so we wont be able to work with others for that we use GitHub. using that we can give the repositaey to othes and the can work on it.
+
+cloning without using GitHub :
+we have to be server for giving to code to evry computer. for that wee ccan use ssh. then clone : git clone root@ipaddr:/path
+git remote -v : give the rermote origin we can use origin in evry where
+in remote we have several branch to acess that wee can make a test branch with simillR NAame. if we do some commits in remote origin branch and we wanted to see it wee can use fetch : git fetch . to view it in test beanch : git merge
+
+git fetch+ git merge = git pull
+
+
+
+git push : to push it to server . ALL the commits inn the branch to be pushed must be pulled first then we can push it.
+ 
+
+git pull request : to sen a request to merge it to  the main 
+
+review :
+
+-------------------------------------------------------------------------------------------
+
+GitHub and git
+
+cloning using GitHub:
+create a repo 
+git remote add origin url
+git branch -M main : to set master branch ti main
+git push -u origin main : Push local code to GitHub (main branch), to set a teacking branch for main
+
+git clone repoppath : you ca ad an exitng repostirtory
+
+lock GitHub so   that all users can mrge and submit for review
+
+In locked branch we have to crea te a new branch and do code in there and push theer.
+
+then too push we have to give a pull request
+
+-------------------------------------------------------------------------------------------
+
+Hosting website using GitHub
+
+
+https://www.youtube.com/watch?v=EGMZ-L0yVhc&list=PLQzJEzrRmXOW7pKbwpicijzUdxZmDgqNL&index=7
+
+-----------------------------------------------------------------------------------------
+
+git rebase
+
+instead of merging main branch to my current working branh for making it UpToDate it eill create a complicated history of commits to removr that we can use rebase
+
+ git pull --rebase is a powerful way to combine fetching and rebasing, and it helps keep your Git history clean and linear.  
+
+
+git push -f (or git push --force) is used to forcefully push your local branch to the remote repository, even if it overwrites changes that are already there.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+✅ 2. Connect Your Local Git Project to the GitHub Repository
+Make sure your local project is already initialized with Git:
+
+
+git init
+Now, link it to your GitHub repo:
+
+
+git remote add origin https://github.com/your-username/your-repo.git
+Or if you're using SSH:
+
+git remote add origin git@github.com:your-username/your-repo.git
+You can verify the remote:
+git remote -v
+
+✅ 3. Set the Branch and Push to GitHub
+Set the branch to main (or whichever you're using):
+git branch -M main
+
+Now push your code to GitHub:
+git push -u origin main
+This pushes your local main branch to GitHub and sets it as the tracking branch for future pushes and pulls.
+
+------------------------------------------------------
+git rebase main
+This moves all your commits in htmlcss to the latest tip of main.
+
+Then:
+# Step 3: Switch to main
+git checkout main
+
+# Step 4: Merge htmlcss (now fast-forwarded)
+git merge htmlcss
+
+# Step 5: Push to GitHub
+git push origin main
+
+
+
+
+
+
+
+
+

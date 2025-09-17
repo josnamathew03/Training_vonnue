@@ -1,0 +1,234 @@
+~ current user directory
+1. whoami
+
+2.man
+
+3.clear
+
+4.pwd - print current working directiry
+
+5.ls list directory
+ ls -l,
+ ls -al
+ls /josna - list folders in josna
+
+6.cd - change the current working directory
+cd ..
+cd /home/josna
+cd ~
+cd  -
+
+7.mkdir - make directory 
+mkdir test
+mkdir test/projectsp/test
+mkdir dol1 dol2
+mkdir -p myapp/src/components(nested directory)
+mkdir -v myapp/src/components(human readable)
+mkdir -p myproject/{src,tests,docs}( inside myprojects three folders)
+
+
+
+8.touch - create new files, dependnt on the time stamp
+touch file.txt	Creates a new empty file file.txt
+touch file1 file2	Creates multiple empty files
+touch logs/output.log	Creates the file output.log (if path exists)
+
+9.rmdir -  remove empty directory
+rmdir folder1 folder2
+rmdir -p a/b/c( delete c, b, a if they are  empty)
+
+10.rm - remove files or direcctories
+rm file.txt	Deletes file.txt
+rm file1 file2	Deletes multiple files
+rm *.log	Deletes all .log files in cu
+rm -r file1 file2 recursive delete
+rm -I file1 file2 promp msg
+
+11.mv - move or rename files or directories
+mv file.txt folder/	Moves file.txt into folder/
+mv old.txt new.txt	Renames old.txt to new.txt
+mv *.log backup/	Moves all .log files into the backup/ folder
+mv -i important.txt backup/	Moves file with confirmation if it will overwrite
+
+
+12.cp - duplicate files from one place to another
+Command	What It Does
+cp file.txt backup/	Copies file.txt to the backup/ folder
+cp file1.txt file2.txt	Copies file1.txt and renames it to file2.txt
+cp -r folder1/ folder2/	Recursively copies folder1 (and its contents) to folder2
+
+13.head - first ten lines
+head file.txt	Displays first 10 lines of file.txt
+head -n 5 file.txt	Displays first 5 lines
+head -c 20 file.txt	Displays first 20 bytes (characters)
+
+14.tail - last ten lines
+tail file.txt	Displays last 10 lines of file.txt
+tail -n 15 file.txt	Displays last 15 lines
+tail -c 30 file.txt	Displays last 30 bytes
+
+15.date
+
+16.redirection 
+>(replace the content) 
+>>(addcontent without replacing)
+
+17.cat - display content, combine multiple files, crete new files
+cat file.txt	Displays the contents of file.txt
+cat file1 file2	Displays contents of file1 and file2 together
+cat file1 file2 > file3	Combines file1 and file2 into new file file3
+cat > file.txt	Creates a new file file.txt (type text, then Ctrl+D to save)
+
+18.less - view the contents of a file
+
+19.echo
+
+20.wc - word count
+wc -l file.txt
+wc -w file.txt
+wc -c file.txt
+
+21.piping
+sort -h ] | tail 
+
+22.sort
+sort -h (numeric sort)
+sort -hr
+
+23.uniq
+uniq file.txt	Removes adjacent duplicate lines from file.txt and prints unique lines
+sort file.txt | uniq	Sorts file first, then removes all duplicates anywhere in the file
+uniq -c file.txt	Prefixes lines by the number of occurrences
+uniq -d file.txt	Prints only duplicate lines
+uniq -u file.txt	Prints only unique (non-duplicate) lines
+
+24.expansions - 
+~ echo ~, cd ~
+$ - echo $PATH, echo $USER
+* - every path here, echo *.txt, echo *.??(matches any two characters), rm *.??(remove all files with two character extension)
+touch {a,b,c}.txt o/p: a.txt, b.txt, c.txt, echo Day{1..99}\
+
+25.diff - difference between two files
+
+26.find -
+ find . -name '*7*', 
+find greenhouse -name '*7*', 
+find . -type d(dierectories), 
+find . -type f(files), 
+find . -type d -iname '*js',
+find . -name '*7*' -or 'E', 
+find . -name '*7*' -not 'E', 
+find . -name '*7*' -or 'E', 
+find .  -size +100 , 
+find . -type f -mtime +3, 
+find . -type f cat {} \; 
+
+27.grep - help to find text inside of files
+ grep joisna gsfd.txt 
+ grep -n  joisna gsfd.txt
+ grep -nC 2 joisna gsfd.txt
+ grep -r  joisna( instead of searching in one file it serach in all files in the current working directory)
+ grep -ri joisna 
+can be used for regular expressions
+
+28. du - calculate the size of current directory
+du -h | sort -h ] | tail (piping) 
+
+29.df - get disk usage information
+df -h
+
+30.history - all recent commands
+!2040(history expnasion) 
+history | grep 'j'
+
+31.ps - process initiated by me status
+ps ax - all process
+ps axww - wrap around
+ps axww | grep 'vs code'
+
+32.top - showsmore cpu intensive processes
+top -o mem
+
+33.kill - send variety of systems
+kill -l( list kill sigmals)
+kill <pid>
+kill -9 299383 (kill -sigmalno <pid>)
+killall <name>
+
+34. jobs - view bg or stopped jobs
+
+35. fg - bring bg job to foreground
+
+36.bg  - bring fg job to background
+
+37. top - list of running process
+
+38. sleep
+sleep 50(fg)
+sleep 50 &(bg)
+
+39.gzip - reduce size of files(compression), 
+gzip filename  replaces original file
+gzip -c filename > filename.gz or gzip -k filename (keeps original file)
+compress multiple 
+
+40.gunzip -unzip
+gunzip -kv filename.gz(keep original)
+ 
+41.tar- group multiple file and compressthem
+tar -cf newfname.tar file1 file2 (c for create f for  files)
+tar -xf archive.tar (ungroup file in the  current directoty)
+tar -xf archive.tar -C directory(ungroup file sin the  specified directoty)
+tar -tf archive.tar( to view files)
+tar -czf archive.tar.gz file1 file 2( compress and grp at the same time)
+
+42.nano - text editor
+
+43.alias - only exist in current
+alias myls='ls -la'
+nano .barshrc (create alias which will persist)
+
+44.xargs - take output from one command and use it as an argumebt for second command
+cat   dd.txt | rm (wont work) cat   dd.txt | xargs rm 
+find . | xargs ls
+ 
+45.ln - create links, not copy its pointers
+
+hardlinks - cannot link directories, cant axess external files keep in there eben if kthe link is gone--  ln <original> <link>
+soflink - when original os gone the link is also broken -- ln -s <original> <link>
+
+46.who - displays the users loged in to the system
+
+47.su - switch user when you are logged in with another  user
+su - username or su username
+
+48. sudo - root user the owner of evry porgramm, you can run commands as run command as root
+sudo nano /etc/hosts
+
+49. passwd - change password
+root can change anyones password
+
+50. chown - change the owner 
+chown <owner><file>
+chown -R <owner><file>
+
+
+51.permissions
+Every file in a linus system has an owner and a group owner. members of group will be able to view only not edit the file.
+ls -l :
+- indicate file and d indicate directory, l indicate symlink
+rw- owner read write execute  permisiions
+rw- group
+r-- world
+
+52.chmod - chage mode for alter perissions
+u-user, g-group , o-others, a-all of the above
+- remives permission , + gr ands the pertmission
+= set a permission and remove others 
+chmode a-w file.txt
+
+
+
+
+
+

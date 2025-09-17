@@ -1,0 +1,369 @@
+--------------------------------------------------------------------------------------------
+Basics
+                                                                                                          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <diiv>
+        <p>Hi <strong>GUYS</strong></p>
+        <h1>Thanks</h1>
+        <h6><em>josna <smaall>Mathew</smaall></em></h6>
+        <a href="about.html">Niinja.com</a>
+    </diiv>
+    <div>
+    <ul>
+        <li>fruits </li>
+        <li>veg</li>
+
+    </ul>
+    </div>
+        <ol>
+            <li>mango</li>
+            <li>orange</li>
+        </ol>
+    </div>
+    <hr>
+    <span>Hope you <br> are good</span>
+
+    <img src="image/nin.webp" alt="'ninjaA">
+
+   <blockquote cite="https://salimkumar.com">
+    How beautiful people are.
+</blockquote>
+<!-- exmaple  ctrl + /-->
+<p style="color: orange;"> beautiful</p>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------
+
+Forms
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forms</h1>
+
+    <form>
+        <label for="username">Enter username:</label>
+        <input type="text" id="usename" name="username" > 
+        <br><br>
+        <!-- id can be used for label -->
+         <!-- name attribute is used by the server toget the value also useful in ase of radiobuttons -->
+
+         <label for="email">Enter email:</label>
+         <input type="email" id="email" name="email" >
+         <br><br>
+
+         <label for="password">Enter password:</label>
+         <input type="passwword" id="password" name="password" placeholder="pass" required>
+
+        <br><br>
+         <label for="gender">ENter gender:</label>
+         <br>
+         <input type="radio" id="f" name="gender" value="female">feemale <br>
+         <input type="radio" id='m' name="gender" value="male">male <br><br>
+<!-- all radio button with that namme will get unchecked -->
+
+<!-- DROPDOWN -->
+<label for="ques">Questions:</label>
+<select name="ques" id="quues">
+    <option value="q1">jfjds?</option>
+    <option value="q2">/kjjsahh?</option>
+    <option value="q3">fjk hbhfj?</option>
+</select>
+<br><br>
+<label for="ans">Answer</label>
+<input type="text" id="ans" name="ans" placeholder="ans">
+<br><br>
+
+
+<!-- TEXTAREA -->
+ <label for="bio">Bio:</label>
+ <br>
+<!-- <textarea name="bio" id="bio" rows="10" cols="50">enter bio..</textarea> -->
+<textarea name="bio" id="bio" rows="10" cols="50" placeholder="enter bio."></textarea>
+<!-- alt+click select multiple -->
+ <br><br>
+
+<!-- SUBMIT -->
+ <input type="submit" value="submit">
+<!-- when the form is submitted all the values are gone to where action is specified -->
+ <!-- add required for form validation -->
+
+
+
+    </form>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------
+
+CSS BASICS
+
+h1 {
+    color: orange;
+    font-size: 20PX;
+    background-color: slategray;
+    font-family:Arial ;
+    text-align: center;
+}
+p {
+    color: slategray;
+    text-align: right;
+    line-height: 30px ;
+    letter-spacing: 0.2px;
+    column-count: 2;
+    
+}
+ul {
+    /* 
+    border-width: 20p;
+    border-style: dashed;
+    border-color: rebeccapurple; */
+    /* border : 4px solid crimson;   three in one*/
+    border-left : 2px dashed purple;
+    border-right :2px dotted darkblue;
+}
+/* for specifying colors very specifically we can also use hex codes or give color names directly.
+hexcode = #r+g+b*/
+
+li {
+    list-style-type: square;
+    /* text-shadow: 3px 3px lightgrey; */
+    text-shadow: 3px 3px #1c4242;
+
+}
+/* inline elemnents - Dont take up any  more room than their contet needs eg:span anchor strong. dont nest block elemnets in inline elemenets
+block elements- take whole width regardless o fthe content eg:p,div,h1
+ */
+
+ /* in inspect console we can seee the styles as block oor l=inline elements we can actually forcw+efully change this in our screen
+span tag is actually inline element we can make it block elemr=etn
+div is block elment we can make it inline element*/
+span {
+    /* display: block; */
+     margin: 20px;
+    padding: 20px;
+}
+div {
+    /* display: inline; */
+    margin: 20px;
+    padding: 20px;
+}
+
+/* margin alows to give  a margin outside the border all the way aroung the border for block elemnets
+for inline elements margin will be given only for the top and botton
+padding given an internal space for an element, giievs padidng all the way around both inline and block elemnets
+padding when comes to inline elements can overlap and collapse whenn it came horizontally
+in case of block elments margin can get collapsed
+We can overwrite user agent style sheet which is given by default by the browseer*/
+
+---------------------------------------------------------------------------------
+
+CLASS AND SELECTORS
+
+/*Class Selectors
+ class selctor starts with a . followed by a class name. Give class name wher e wee specify the paragraph
+we can give same class name to diffferrt tags which we ewanted to style the same
+for tags with samme name we can use p.tagmname to select specific selectors*/
+
+p.para1 {
+    color: cadetblue;
+}
+p.sucess {
+    color: green;
+}
+/* we can give two class name for the same tagg  */
+p.sucess.feedback {
+    border: 2px solid brown;
+}
+
+/* Id selectors
+#folloewd b y id name 
+we ca also give tag name at the front
+all id must be unique*/
+
+div#content {
+    background-color: #ebebeb;
+    padding: 20px;
+}
+
+/* descentant selctors 
+   inside div there is an anchor we can style it using this
+   inside div tah-g there is an class selector par1 we stylet this
+   space after tag name indicate descentant slector
+   other wise it check kfor a div tag with class name given
+*/
+div a {
+    color: rgb(130, 23, 69);
+}
+div .para1{
+    background-color: rgb(233, 230, 231);
+}
+
+/*  Attribute selector
+ anchor tags with attribute href- a[href]
+ anchor tag with attribute href and value of href specified
+ '*' indicate the given sentance specified anywhere in the href
+ $ means any href which eends with the given href */
+
+ a[href$="com"] {
+    background-color: #6d2424;
+    color: aliceblue;
+    text-decoration: double;
+    font-weight: bold;
+    text-transform: uppercase;
+
+ }
+ a[href*="youtube"] {
+    /* background-color: #6d2424; */
+    /* color: aliceblue; */
+    text-decoration: double;
+    font-weight: bold;
+    text-transform: uppercase;
+
+ }
+ /*Universal selectors
+ * {} this selcts all the elements
+  */
+
+service:nth-child(1) targets an element with the class .service only if it is the first child of its parent.
+ It selects the first .service element — but only if it's actually the first child overall, not just the first .service.
+
+ /* Css cacade
+ html elements caninherit css properties that are applies to their parents
+ <div>
+    <p> hii
+        <span> ninjja </span>
+    </p>
+</div>
+
+div{
+ color; red ;
+ border : 20px solid red;
+ margon: 40px;
+}
+ red color is applied to all paragraph which is a child of div and span which is a child of paragrsph
+ not all properrties are inherited if we gave border then it is only applied to div as awhole 
+ if wanted to nherrit the margin property then
+ if we dont want the color properrty to be same as div jjust give the color in the p property
+
+ if we specify color again then the onne givenn the  last is considereed becausse it is taken from bottom to top
+ But if we give a more speciifc selector like ddescentant then the one that is speccific is taken
+ div p{
+    margin:inherit;
+    border : inherit;
+    color : blue;
+}
+
+p{
+ color : black;
+}
+
+ */
+
+ -------------------------------------------------------------------------------------------------
+ SEMANTICS
+
+<main> for main content of a webpage
+<section> defines  a certain scrtions of webpage
+<article> defines san article
+<aside> content thatrelated to something elements
+<headeer> for headeer
+<footer> for footer
+
+---------------------------------------------------------------------
+
+CHROME DEV TOOLS
+
+inspect
+copy selctor - right click , copy, selector and we ecan use it
+edit html- right click , edit as html
+go to specific portion- scroll in to view
+temporarily hide something - hide element
+edit attribute 
+add attribute
+css styles can be viewd and edit too
+in source we can see the diffferent sources like that we see in vscode. i can actuallt edit those source files but it is gone after refreshing.
+in sources -> workspace i can add folder manually and i can work with it. In therer  i can actually edit and save it.
+in console i can write codes like alert
+i can view differrent view of my website
+
+----------------------------------------------------------------
+
+POSITION AND LAYOUT
+
+static : defualt static
+Elements flow naturally from top to bottom, left to right.
+No special positioning.
+top, right, bottom, left don’t work.
+
+relative : position is specified relative to the page
+Element stays in the normal flow.
+You can move it relative to its original position using top, left, right, bottom.
+The space it originally took does not collapse.
+{
+    position : relative;
+    left: 20px;
+    bottom : 20px;
+}
+
+fixed : position is specified and it willbe constant even if we change the page
+Removed from the document flow.
+Positioned relative to the viewport (browser window).
+Doesn’t move when you scroll.
+{
+    position : fixed;
+    left :0px;
+    right :0px;
+}
+
+Absolute : positioning an element absolutly specif to its parent
+Removed from the document flow — like it floats above everything.
+Positioned relative to the nearest ancestor that has position: relative|absolute|fixed.
+If no such ancestor exists, it's positioned relative to <html> / the page itself.
+{
+    position : Absolute;
+     left: 20px;
+    bottom : 20px;
+}
+
+sticky: combination of static and fixed
+
+--------------------------------------------------------------------------------------
+
+PSEUDO CLASSES
+
+style elemenets when they aree in a p  a rticular state-hover, focus, firs child of a parent
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INTRO TO MEDIA QUERIES
+
+Media queries: Tell the browser how to style an element at particu lar viewport dimensions
+
+Viewport meta tag: tell the browser what width the viewport should be
+
+Responsive iamges: only  load smaller images for mobile devices
+
+we can to have mobile first approach. first design for  mobille and then gradually go for desktop view.
+
+viwport meta tag is used to set the width aas device width                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+
+
+
+
+
+

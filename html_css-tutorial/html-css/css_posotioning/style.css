@@ -1,0 +1,166 @@
+/* p,a{
+    width: 100%;
+    border: 2px solid red;
+    margin: 20px 20px;
+    padding: 20px;
+    background-color: grey;
+} */
+a{
+    text-decoration: none;
+    color: white;
+    background-color: chocolate;
+    display: inline-block;
+    width: 50%;
+    margin: 20px 20px;
+
+}
+/* p{
+    margin-left: 30px;
+    margin-right: 10px;
+    background-color: #eee;
+    line-height: 1.4em;
+    font-family: Arial;
+}*/
+img{ 
+    float:left;
+    margin: 10px;
+    width:50%;
+    
+}
+/* .wraper {
+    background: hwb(0 46% 44%);
+    max-width: 1400px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+} */
+.red{
+    background-color: red;
+    float: right;
+}
+.blue{
+    background-color: blue;
+    float: left;
+    /* margin: 10px; */
+
+}
+.green{
+    background-color: green;
+    float: right;
+}
+.box{
+    height: 100px;
+    /* margin: 20px; */
+    width: 100px;
+}
+.service h2, .service p{
+    color: white;
+    margin: 10px 10px;
+    text-align: center;
+}
+.serviceM{
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.service{
+    float: left;
+    /* display: inline-block; */
+    margin:1%;
+    width: 29.33%;
+    background-color: grey;
+    padding: 1%;
+    position: relative;
+
+}
+.service:nth-child(1){
+    top: 5px;
+}
+.service:nth-child(2){
+    top: 10px;
+}
+.service:nth-child(3){
+    top: 15px;
+}
+
+.content{
+    /* background-color: #ccc; */
+    padding: 10px 20px;
+    clear:left;
+    margin-top: 20px 1%;
+    /* width: 500px; */
+    /* text-align: center; */
+    /* position: relative;
+    bottom: 50px; */
+}
+.serviceM::after{
+    content: "";
+    display: block;
+    clear: left;
+}
+section, aside{
+    float:left;
+    width:46%;
+    margin:1%;
+    padding :1%;
+    background: hwb(0 46% 44%);
+}
+aside img{
+    width: 100%;
+    height: 220px;
+    margin-left: -2px;
+}
+.colums::after{
+    content: "";
+    display: block;
+    clear: left;
+}
+.content p{
+    /* -webkit-column-count: 3; */
+    column-count: 3;
+    /* -webkit-column-gap : 50px; */
+    column-gap:50px;
+    /* -webkit-column-rule:3px solid #ccc; */
+    column-rule: 1px solid #ccc;
+    text-align: justify;
+
+}
+#banner{
+    max-height: 300px;
+    overflow: hidden;
+    margin: 1%;
+    position: relative;
+
+}
+#banner h2{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+
+}
+nav{
+    background: #333;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+nav ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+nav li{
+    list-style-type: none;
+    color: white;
+    float: left;
+    padding-right: 20%;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forms</h1>
+
+    <form>
+
+        <label for="username">Enter username:</label>
+        <input type="text" id="usename" name="username" > 
+        <br><br>
+        <!-- id can be used for label -->
+         <!-- name attribute is used by the server toget the value also useful in ase of radiobuttons -->
+
+         <label for="email">Enter email:</label>
+         <input type="email" id="email" name="email" >
+         <br><br>
+
+         <label for="password">Enter password:</label>
+         <input type="passwword" id="password" name="password" placeholder="pass" required>
+
+        <br><br>
+         <label for="gender">ENter gender:</label>
+         <br>
+         <input type="radio" id="f" name="gender" value="female">feemale <br>
+         <input type="radio" id='m' name="gender" value="male">male <br><br>
+<!-- all radio button with that namme will get unchecked -->
+
+<!-- DROPDOWN -->
+<label for="ques">Questions:</label>
+<select name="ques" id="quues">
+    <option value="q1">jfjds?</option>
+    <option value="q2">/kjjsahh?</option>
+    <option value="q3">fjk hbhfj?</option>
+</select>
+<br><br>
+<label for="ans">Answer</label>
+<input type="text" id="ans" name="ans" placeholder="ans">
+<br><br>
+
+
+<!-- TEXTAREA -->
+ <label for="bio">Bio:</label>
+ <br>
+<!-- <textarea name="bio" id="bio" rows="10" cols="50">enter bio..</textarea> -->
+<textarea name="bio" id="bio" rows="10" cols="50" placeholder="enter bio."></textarea>
+<!-- alt+click select multiple -->
+ <br><br>
+
+<!-- SUBMIT -->
+ <input type="submit" value="submit">
+<!-- when the form is submitted all the values are gone to where action is specified -->
+ <!-- add required for form validation -->
+
+
+
+    </form>
+</body>
+</html>
